@@ -1,0 +1,17 @@
+CONTAS DO MÊS
+
+App web instalável (PWA), sem login no app e sem backend. Depois de publicado
+por HTTPS, pode ser instalado pelo Chrome no Android e usado offline. Contas,
+pagamentos e datas continuam salvos no armazenamento local desse navegador.
+
+Para abrir no computador:
+1. Abra esta pasta em um terminal.
+2. Execute: python -m http.server 8000
+3. Acesse http://localhost:8000 no navegador.
+
+Depois que o endereço publicado estiver aberto no Chrome do Android:
+1. Toque no menu ⋮ do Chrome.
+2. Escolha “Instalar app” ou “Adicionar à tela inicial”.
+
+Os dados não são sincronizados entre dispositivos. Limpar os dados do site no
+navegador também apaga as contas registradas naquele aparelho.
