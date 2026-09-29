@@ -8,8 +8,8 @@
   "scope": "/contas-do-mes/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#eaf1ed",
-  "theme_color": "#eaf1ed",
+  "background_color": "#eff4f0",
+  "theme_color": "#ffffff",
   "prefer_related_applications": false,
   "icons": [
     {
