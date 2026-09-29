@@ -1,15 +1,16 @@
 {
-  "id": "./",
+  "id": "/contas-do-mes/",
   "name": "Contas do mês",
   "short_name": "Contas",
   "description": "Acompanhe suas contas mensais e pagamentos, mês a mês.",
   "lang": "pt-BR",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/contas-do-mes/",
+  "scope": "/contas-do-mes/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f5f7f4",
   "theme_color": "#f5f7f4",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "./icon-192.png",
