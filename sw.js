@@ -1,4 +1,4 @@
-const CACHE_NAME = 'contas-do-mes-v3';
+const CACHE_NAME = 'contas-do-mes-v4';
 const APP_FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', event => {
@@ -18,9 +18,9 @@ self.addEventListener('fetch', event => {
   // Always check for the newest shell files so installed Android apps receive
   // visual and manifest updates without getting stuck on an old cached copy.
   const url = new URL(event.request.url);
-  if (url.pathname.endsWith('/index.html') || url.pathname.endsWith('/manifest.webmanifest') || url.pathname.endsWith('/sw.js')) {
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('/index.html') || url.pathname.endsWith('/manifest.webmanifest') || url.pathname.endsWith('/sw.js')) {
     event.respondWith(fetch(event.request).then(response => {
-      if (response.ok && url.pathname.endsWith('/index.html')) {
+      if (response.ok && (event.request.mode === 'navigate' || url.pathname.endsWith('/index.html'))) {
         const copy = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
       }
